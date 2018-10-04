@@ -3,8 +3,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script  crossorigin src="http://unpkg.com/react@16/umd/react.development.js"></script>
-    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <title>Document</title>
     
 </head>
@@ -12,7 +13,19 @@
     
    <div id="app"></div>
     
-    
+    <script type="text/babel">
+        class App extends React.Component {
+           render() {
+               return (
+               <div className="app-content">
+                <h1>Hey, ninjas</h1>
+                <p>{ Math.random() * 10 }</p> 
+               </div>    
+             )// Math.Random is basic JS used to get random number and what we did was do exactly that and get that random number and times it by 10
+           } 
+        
+        ReactDOM.render(<App />, document.getElementById('app'));
+    </script>
     
     
 </body>
