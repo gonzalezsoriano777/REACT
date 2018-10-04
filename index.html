@@ -18,17 +18,31 @@
             state = {
              name: 'Albert',
              age: 35
-            } // makes an object in which has an array
+            }
+            handleClicki(e){
+                 console.log(e.target);
+                // console.log(this.state.age); doesn't work because of the scope of the 'this' method
+            }
+            handleMouseOvert(e){
+                console.log(e)
+            }
+            handleCopyi(e){
+                console.log('Try being original for once fam!');
+            }
            render() {
                return (
                <div className="app-content">
                 <h1>Hey, ninjas</h1>
                 <p>My name is: { this.state.name } and I am { this.state.age }</p> 
-                // using the 'this' method it calles the state object and calls for the name and the age of person with the name
-               </div>    
+                <button onClick={this.handleClicki}>Click Me</button>
+                <button onMouseOver={this.handleMouseOvert}>Hover me</button>
+                <p onCopy={this.handleCopyi}>What we think, we become</p>
+               </div>
+               
              )
-           } 
-        }
+           }
+          }
+
         ReactDOM.render(<App />, document.getElementById('app'));
     </script>
     

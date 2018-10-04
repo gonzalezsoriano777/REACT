@@ -2,13 +2,8 @@
 
 /*
 
-Want to learn a useful tool?
-
-Go to google chrome store and download the 'React Developer tool'
-what it does is it puts a icon in the right side top corner 
-that lights up whenever your using react 
-and different components REACT has
-such like states, what we used previously
+onMouseOver - meaning once some hovers or moves there mouse to whatever is specified then it execute the function in the console
+onCopy - meaning when you try to copy a string or integer then it will execute a line of string in the console (used index.html)
 
 */
 
