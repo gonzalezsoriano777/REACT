@@ -2,15 +2,13 @@
 
 /*
 
-Component State
+Want to learn a useful tool?
 
--JS Object
-- Describes the current state of the component 
-- data, UI-state
-
-- The state of a component can be updated over time
-- a modal could lose
-- the data we output could change
+Go to google chrome store and download the 'React Developer tool'
+what it does is it puts a icon in the right side top corner 
+that lights up whenever your using react 
+and different components REACT has
+such like states, what we used previously
 
 */
 
