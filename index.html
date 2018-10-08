@@ -19,8 +19,14 @@
              name: 'Albert',
              age: 35
             }
-            handleClicki(e){
-                 console.log(e.target);
+            handleClicki = (e) => {
+                this.setState({
+                    name: 'Yoshi',
+                    age: 25 // creating new state in which replace the state object only when clicking on the button
+                    
+                });
+                console.log(this.state);
+                // console.log(e.target);
                 // console.log(this.state.age); doesn't work because of the scope of the 'this' method
             }
             handleMouseOvert(e){
