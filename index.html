@@ -19,32 +19,23 @@
              name: 'Albert',
              age: 35
             }
-            handleClicki = (e) => {
-                this.setState({
-                    name: 'Yoshi',
-                    age: 25 // creating new state in which replace the state object only when clicking on the button
-                    
+            handleChange = (e) => {
+                this.setState({ // 'value' gets the value when the function is fired or executed
+                    name: e.target.value
                 });
-                console.log(this.state);
-                // console.log(e.target);
-                // console.log(this.state.age); doesn't work because of the scope of the 'this' method
             }
-            handleMouseOvert(e){
-                console.log(e)
-            }
-            handleCopyi(e){
-                console.log('Try being original for once fam!');
+            handleSubmit = (e) => {
+                e.preventDefault(); // prevents the page from being refreshed
+                console.log('form submitted', this.state.name)
             }
            render() {
                return (
                <div className="app-content">
-                <h1>Hey, ninjas</h1>
-                <p>My name is: { this.state.name } and I am { this.state.age }</p> 
-                <button onClick={this.handleClicki}>Click Me</button>
-                <button onMouseOver={this.handleMouseOvert}>Hover me</button>
-                <p onCopy={this.handleCopyi}>What we think, we become</p>
-               </div>
-               
+                <h1>My name is: { this.state.name }</h1> 
+               <form onSubmit={this.handleSubmit}>
+               <input type="text" onChange={this.handleChange}/> // once it calls the functions, once you enter some text it changes the name as well
+               <button>Submit</button>
+               </form>
              )
            }
           }
