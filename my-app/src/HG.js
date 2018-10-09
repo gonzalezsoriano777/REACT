@@ -1,9 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react'; // this whole thing is a functional component, where we don't need the state and only concerned with the UI 
 
-class HG extends Component {
-    render(){
-        // console.log('this.props') // gives us an object that we have passed down in app.js
-        const { HGI } = this.props; // this is another way of calling the objects and assigning them to a variable (called de-structuring)
+
+const HGS = ({HGI}) => { // there's different methods to have the props show up using the const of HGS and the function executed inside it
+       //const { HGI } = props; // this is another way of calling the objects and assigning them to a variable (called de-structuring)
        const HGList = HGI.map(HGIs => {
            return (
         <div className="HGIs" key={HGIs.id}> 
@@ -11,7 +10,6 @@ class HG extends Component {
          <div>Age: { HGIs.age }</div>
          <div>Belt: { HGIs.belt }</div>
          </div>
-         // the key attribute is used if your using id inside your object. (This is used in your console since it gives you a warning about a need for a 'unique key') 
                )
        })
      return(
@@ -19,7 +17,6 @@ class HG extends Component {
         { HGList }
          </div>
          )
-    }
 }
 
-export default HG
+export default HGS
