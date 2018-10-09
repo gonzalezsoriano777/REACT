@@ -1,7 +1,7 @@
 import React from 'react'; // this whole thing is a functional component, where we don't need the state and only concerned with the UI 
 
 
-const HGS = ({HGI}) => { // there's different methods to have the props show up using the const of HGS and the function executed inside it
+const HGS = ({HGI, deleteHG}) => { 
         const HGList = HGI.map(HGIs => {
          if(HGIs.age > 20){ // this means if the age is over 20 then it stays in the page but if it isn't then it will be removed
            return (
@@ -9,7 +9,10 @@ const HGS = ({HGI}) => { // there's different methods to have the props show up 
          <div>Name: { HGIs.name }</div> 
           <div>Age: { HGIs.age }</div>
           <div>Belt: { HGIs.belt }</div>
+         <button onClick={() => deleteHG(HGIs.id)}>Delete Hector G</button> 
+         
           </div>
+          // the button is now an arrow function.. since that's the only way the function for deleting attributes will work, so it not automatically going to evolk, unless the function surrounding it fires. Only fires once clicked on
           )
          } else {
           return null

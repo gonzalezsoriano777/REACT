@@ -18,12 +18,24 @@ class App extends Component {// Hey! Once your here it best to delete the code t
       })
       
   }
+  deleteHG = (id) => { //deletes data from the HGI object, depending on what it calls
+     let HGI = this.state.HGI.filter(HeC => {
+         return HeC.id !== /* is not*/ id // means if the HeC.id is equal to the id then it will return false and filter the id out of the array, 
+         //but if it doesn't it will remain true and stay in the page
+     });
+     this.setState({
+         HGI: HGI
+     })
+     
+     // console.log(id); // once trying to delete the object you make, it put's a random number, 
+      //to the math.random called while using the HGIs.id
+  }
   render() {
     return (
       <div className="App">
        <h1>My First React App</h1>
        <p>Welcome :0</p>
-       <HG HGI={this.state.HGI} />
+       <HG deleteHG={this.deleteHG} HGI={this.state.HGI} />
        <AddHG addHGs={this.addHGs}/>
        </div>
       // the HG tag is just calling the data in the HG.js file and merging it with the App.js file
