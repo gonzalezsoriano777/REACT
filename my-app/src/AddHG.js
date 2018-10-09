@@ -14,7 +14,7 @@ class AddHG extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        console.log(this.state) 
+        this.props.addHGs(this.state); // Once it submits it changes everytime and adds a new array from here
     }
     render(){
     return (
