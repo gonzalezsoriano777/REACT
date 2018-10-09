@@ -2,21 +2,25 @@ import React from 'react'; // this whole thing is a functional component, where 
 
 
 const HGS = ({HGI}) => { // there's different methods to have the props show up using the const of HGS and the function executed inside it
-       //const { HGI } = props; // this is another way of calling the objects and assigning them to a variable (called de-structuring)
-       const HGList = HGI.map(HGIs => {
+        const HGList = HGI.map(HGIs => {
+         if(HGIs.age > 20){ // this means if the age is over 20 then it stays in the page but if it isn't then it will be removed
            return (
-        <div className="HGIs" key={HGIs.id}> 
+         <div className="HGIs" key={HGIs.id}> 
          <div>Name: { HGIs.name }</div> 
-         <div>Age: { HGIs.age }</div>
-         <div>Belt: { HGIs.belt }</div>
-         </div>
-               )
+          <div>Age: { HGIs.age }</div>
+          <div>Belt: { HGIs.belt }</div>
+          </div>
+          )
+         } else {
+          return null
+        }
        })
-     return(
+      return(
         <div className="ninja-list">
-        { HGList }
+        { HGList } 
+        
          </div>
          )
-}
+        }
 
 export default HGS

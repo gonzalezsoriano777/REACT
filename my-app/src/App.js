@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import HG from './HG'; // This is nesting components since your importing a file and putting it into another file
-// import './App.css';
+import AddHG from './AddHG';
 
 class App extends Component {// Hey! Once your here it best to delete the code that's a default so that you can create your very own react app
   state = {
@@ -16,6 +16,7 @@ class App extends Component {// Hey! Once your here it best to delete the code t
        <h1>My First React App</h1>
        <p>Welcome :0</p>
        <HG HGI={this.state.HGI} />
+       <AddHG />
        </div>
       // the HG tag is just calling the data in the HG.js file and merging it with the App.js file
     );
