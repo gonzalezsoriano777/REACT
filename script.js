@@ -23,4 +23,6 @@ and start the package that runs inside your project 'npm start'
 
 ALERT! Must have at least node.js version of 5.2 or higher to actually make this work, check by using 'node -v'
 
+Overal it just shows you the sources and key files that are going to be used for the application that's gonna be created
+
 */ 
