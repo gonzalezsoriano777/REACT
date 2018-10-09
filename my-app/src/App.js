@@ -8,8 +8,10 @@ class App extends Component { // Hey! Once your here it best to delete the code 
       <div className="App">
        <h1>My First React App</h1>
        <p>Welcome :0</p>
-       <HG />
-      </div>
+       <HG name="Ryu" age="35" belt="Black" />
+       <HG name="Jeffy" age="65" belt="Yellow" /> 
+       </div>
+      // the HG tag is just calling the data in the HG.js file and merging it with the App.js file
     );
   }
 }
