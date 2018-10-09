@@ -3,15 +3,21 @@ import React, { Component } from 'react';
 class HG extends Component {
     render(){
         // console.log('this.props') // gives us an object that we have passed down in app.js
-        const { name, age, belt } = this.props; // this is another way of calling the objects and assigning them to a variable (called de-structuring)
-     return(
-         <div className="hg">
-         <div>Name: { name }</div> 
-         <div>Age: { age}</div>
-         <div>Belt: { belt}</div>
+        const { HGI } = this.props; // this is another way of calling the objects and assigning them to a variable (called de-structuring)
+       const HGList = HGI.map(HGIs => {
+           return (
+        <div className="HGIs" key={HGIs.id}> 
+         <div>Name: { HGIs.name }</div> 
+         <div>Age: { HGIs.age }</div>
+         <div>Belt: { HGIs.belt }</div>
          </div>
-         // this makes these component extremely re usable, using different props
-        // You can use the objects you made in the App.js define the object here using the console.log and use the this method to specify each and every attribute
+         // the key attribute is used if your using id inside your object. (This is used in your console since it gives you a warning about a need for a 'unique key') 
+               )
+       })
+     return(
+        <div className="ninja-list">
+        { HGList }
+         </div>
          )
     }
 }
