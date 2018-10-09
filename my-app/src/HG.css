@@ -1,0 +1,9 @@
+body {
+    background: pink;
+    transition: all 1s;
+} /* This doesn't mean it's going to turn pink into one file it can have background of pink for files that have the import of the css file itself  */
+
+.HGI form {
+    background: #fff;
+    padding: 20px;
+}

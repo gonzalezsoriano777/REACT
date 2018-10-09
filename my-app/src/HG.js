@@ -1,5 +1,5 @@
 import React from 'react'; // this whole thing is a functional component, where we don't need the state and only concerned with the UI 
-
+import './HG.css'
 
 const HGS = ({HGI, deleteHG}) => { 
         const HGList = HGI.map(HGIs => {
