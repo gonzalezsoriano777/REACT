@@ -29,7 +29,15 @@ class App extends Component {// Hey! Once your here it best to delete the code t
      
      // console.log(id); // once trying to delete the object you make, it put's a random number, 
       //to the math.random called while using the HGIs.id
-  }
+  
+      }
+      componentDidMount(){ // Fires when the component first fires the DOM, Component is mounted to the DOM... shown in console
+          console.log('component mountain');
+      }
+      componentDidUpdate(prevProps, prevState){ // updates what has occured in the page, and what it was after updating and what it was before being updated
+          console.log('component updated');
+          console.log(prevProps, prevState);
+      }
   render() {
     return (
       <div className="App">
