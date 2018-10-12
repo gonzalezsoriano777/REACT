@@ -2,9 +2,9 @@ import React from 'react'
 import { Link, NavLink, withRouter } from 'react-router-dom'
 
 const Navbar = (props) => {
-   setTimeout(() => {
-        props.history.push('/about')
-     }, 2000) // Makes the homepage switch to the about page after 2 seconds
+   //setTimeout(() => {
+     //   props.history.push('/about')
+     //}, 2000) // Makes the homepage switch to the about page after 2 seconds
     
     return (
 <nav className="nav-wrapper red darken-3">
