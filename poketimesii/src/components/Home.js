@@ -27,6 +27,7 @@ class Home extends Component {
                        <p>{post.body}</p>
                       </div>
                      </div>
+                     // For the Link tag.. Once you click one of the text boxes it take you the page but it will have the post name and number
                 )
              })
             ) : (
