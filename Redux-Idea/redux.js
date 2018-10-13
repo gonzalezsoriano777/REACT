@@ -7,8 +7,11 @@ const initState = { // state is the state of the store, this passes the intial s
 }
 
 function myReducer(state = initState, action){
-    console.log(action, state)
-    
+    if (action.type == 'ADD_TODO') {
+      return {
+          todos: [...state.todos, action.todo] // speads the array of state.todos and grabs the action.todo
+     }    
+   }
 }
 const store = createStore(myReducer); 
 
