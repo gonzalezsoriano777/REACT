@@ -14,4 +14,4 @@ const store = createStore(myReducer);
 
 const todoAction = { type: 'ADD_TODO', todo: 'buy milk'}
 
-store.dispatch(todoAction) // dispatch this todoAction which is gonna send it to the reducer
+store.dispatch(todoAction)  // dispatch this todoAction which is gonna send it to the reducer
