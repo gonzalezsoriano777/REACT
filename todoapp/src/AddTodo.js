@@ -26,7 +26,7 @@ class AddTodo extends Component {
              <input type="text" onChange={this.handleChange} value={this.state.content} /> 
             </form>
         </div>
-        // what the value attribute does is it gets the value of the content in which has a empty string and it can put the content and delete it as well
+        
     )
   }
 }
