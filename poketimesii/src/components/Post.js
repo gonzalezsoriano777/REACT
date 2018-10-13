@@ -22,16 +22,17 @@ class Post extends Component {
         <h4 className="center">{this.state.post.title}</h4>
         <p>{this.state.post.body}</p>
         </div>
-        // if we have post then it's gonna show this, with the text of the object of state
+       
         ) : (
              <div className="center">Loading post..</div>
-             // if there isn't no post then it will show this..
+            
         )    
         
     return (
         <div className="container">
            { post } 
         </div>
+        
     )
   }
 }
