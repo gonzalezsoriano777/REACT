@@ -3,12 +3,21 @@ import { connect } from 'react-redux'
 
 
 class Post extends Component {
+    handleClick = () => {
+        this.props.deletePost(this.props.post.id); // calling a function that calls the id in the very bottom to execute a delete post request
+        this.props.history.push('/'); // redirects you to the page you want when you delete something
+    }
     render(){
-        
+        console.log(this.props)
     const post = this.props.post ? (
         <div className="post"> 
         <h4 className="center">{this.props.post.title}</h4>
         <p>{this.props.post.body}</p>
+        <div className="center">
+         <button className="btn grey" onClick={this.handleClick}>
+          Delete Button
+         </button>
+        </div>
         </div>
        
         ) : (
@@ -32,4 +41,12 @@ const MapStatetoProps = (state, ownProps) => {
     }
 }
 
-export default connect(MapStatetoProps)(Post)
+const mapDispatchtoProps = (dispatch) => {
+    return {
+        deletePost: (id) => { dispatch({type: 'DELETE_POST', id: id}) }
+    }
+}
+
+
+
+export default connect(MapStatetoProps, mapDispatchtoProps)(Post)  

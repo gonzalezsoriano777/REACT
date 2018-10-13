@@ -7,6 +7,15 @@ const initState = {
 }
 
 const rootReducer = (state = initState, action) => {
+    if (action.type === 'DELETE_POST') {
+      let newPosts = state.posts.filter(post => {
+        return action.id !== post.id
+      });
+      return {
+       ...state,
+       posts: newPosts
+      }
+    }
     return state; // since your returning the state, the state to begin with is going to the be initState.. Returning the value of whatever is inside the state itself
 }
 
