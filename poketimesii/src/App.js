@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from 'react-router-dom'
 import Home from './components/Home'
 import Contact from './components/Contact'
 import About from './components/About'
+import Post from './components/Post'
 
 
 class App extends Component {
@@ -15,10 +16,11 @@ class App extends Component {
         <Route exact path='/' component={Home} /> 
         <Route path='/about' component={About} />
         <Route path='/contact' component={Contact} />
+        <Route path='/:post_id' component={Post} />
          </div>
       </BrowserRouter>
-      // What does the BroswerRoute do.. this applicatin can use routes and then it grabs the component of 'Home' and uses it using the forward slash 
-    );
+      // What the '/:' means once using the path attribute in the the Route is that your calling a root that has an id (name) of post_id and it bring you to that page
+      )
   }
 }
 
